@@ -1,3 +1,5 @@
+import { PropTypes } from "prop-types";
+
 export const Name = ({ name, setName, setDisplayName }) => {
   const handleChange = (e) => setName(e.target.value);
   const handleSubmitClick = () => {
@@ -15,3 +17,9 @@ export const Name = ({ name, setName, setDisplayName }) => {
     </>
   );
 };
+
+Name.propTypes = {
+  name: PropTypes.string,
+  setName: PropTypes.func,
+  setDisplayName: PropTypes.func
+}
